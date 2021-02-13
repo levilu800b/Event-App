@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Login from './Login'
+import Event from './event';
+import { ApiClient } from './apiClient';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            token: window.localStorage.getItem("token")
+        }
+        this.client = new ApiClient(() => this.state.token, () => this.logout())
+    }
+
+    login(token) {
+        window.localStorage.setItem("token", token)
+        this.setState({ token })
+    }
+
+    logout() {
+        window.localStorage.removeItem("token")
+        this.setState({ token: undefined })
+    }
+
+    render() {
+        if (this.state.token) {
+            return <Event client = { this.client }
+            />
+        }
+        return <Login loggedIn = {
+            (token) => this.login(token)
+        }
+        client = { this.client }
+        />
+    }
 }
 
 export default App;
