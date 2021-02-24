@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Event-App/static/css/main.6645ceb9.chunk.css",
-    "main.js": "/Event-App/static/js/main.27e63cbe.chunk.js",
-    "main.js.map": "/Event-App/static/js/main.27e63cbe.chunk.js.map",
+    "main.js": "/Event-App/static/js/main.e551cee8.chunk.js",
+    "main.js.map": "/Event-App/static/js/main.e551cee8.chunk.js.map",
     "runtime-main.js": "/Event-App/static/js/runtime-main.1e05b696.js",
     "runtime-main.js.map": "/Event-App/static/js/runtime-main.1e05b696.js.map",
     "static/css/2.150d169a.chunk.css": "/Event-App/static/css/2.150d169a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.4998e022.chunk.js",
     "static/css/main.6645ceb9.chunk.css",
-    "static/js/main.27e63cbe.chunk.js"
+    "static/js/main.e551cee8.chunk.js"
   ]
 }
