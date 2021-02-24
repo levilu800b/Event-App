@@ -89,6 +89,7 @@ class Event extends React.Component {
         <br /><br />
         </Col>
         </Row>
+        <Button className="Button" onClick={() => this.props.client.logoutHandler()}>logout</Button>
       </>
     )
 
